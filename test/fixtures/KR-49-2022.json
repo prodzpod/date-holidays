@@ -40,8 +40,8 @@
     "start": "2022-04-02T15:00:00.000Z",
     "end": "2022-04-03T15:00:00.000Z",
     "name": "4.3희생자 추념일",
-    "type": "observance",
-    "rule": "04-03 since 2022",
+    "type": "optional",
+    "rule": "04-03 since 2018",
     "_weekday": "Sun"
   },
   {

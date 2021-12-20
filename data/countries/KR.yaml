@@ -1,4 +1,8 @@
-# @attrib https://en.wikipedia.org/wiki/List_of_public_holidays_in_South_Korea
+# @attrib https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B5%AD%EA%B2%BD%EC%9D%BC%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0/
+# @attrib https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B4%80%EA%B3%B5%EC%84%9C%EC%9D%98%20%EA%B3%B5%ED%9C%B4%EC%9D%BC%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%A0%95
+# @attrib https://www.law.go.kr/LSW/lsInfoP.do?efYd=20161129&lsiSeq=187736#0000
+# @notice only "일반 국가기념일" and paid day-off holidays at that period of time is recorded.
+# @notice in case of a referendum, please add it as "school" holiday
 holidays:
   KR:
     names:
@@ -10,82 +14,603 @@ holidays:
     zones:
       - Asia/Seoul
     days:
-      01-01:
+      # New Year
+      01-01 P3D since 1897 and prior to 1989:
         _name: 01-01
-      # 1st day of 1st lunar month
-      korean 01-0-01 P3D:
+      01-01 P2D since 1989 and prior to 1999:
+        _name: 01-01
+      01-01 since 1998:
+        _name: 01-01
+      # Lunar New Year
+      1 days before korean 01-0-01 P3D prior to 1896: #* Note that this does not "center" the holiday
         name:
           en: Korean New Year
           ko: 설날
-      03-01:
+      korean 01-0-01 since 1896 and prior to 1985:
         name:
-          en: Independence Movement Day
+          en: Korean New Year
+          ko: 설날
+        type: observance
+      korean 01-0-01 since 1985 and prior to 1999:
+        name:
+          en: Folk Day
+          ko: 민속의 날
+      1 days before korean 01-0-01 P3D since 1999 and prior to 2014: #* Note that this does not "center" the holiday
+        name:
+          en: Korean New Year
+          ko: 설날
+      #// 1 days before korean 01-0-01 P3D and if Sunday, public holiday then next not holiday since 2014: #! Note that this doesn't work
+      #//   substitute: true
+      #//   name:
+      #//     en: Korean New Year
+      #//     ko: 설날
+      #TODO: NO SUBSTITUTION, DELETE BELOW IF ISSUE IS RESOLVED
+      1 days before korean 01-0-01 P3D since 2014: #* Note that this does not "center" the holiday
+        name:
+          en: Korean New Year
+          ko: 설날
+      substitutes 1 days before korean 01-0-01 if Sunday then next Wednesday since 2014: 
+        substitute: true
+        name:
+          en: Korean New Year
+          ko: 설날
+      substitutes korean 01-0-01 if Sunday then next Tuesday since 2014: 
+        substitute: true
+        name:
+          en: Korean New Year
+          ko: 설날
+      substitutes korean 01-0-02 if Sunday then next Monday since 2014: 
+        substitute: true
+        name:
+          en: Korean New Year
+          ko: 설날
+      # 03-01
+      03-01 since 1920 and prior to 1949:
+        name:
+          en: Korean Independence Day
+          ko: 독립선언기념일
+      03-01 since 1949 and prior to 2022:
+        name:
+          en: The March 1st Independence Movement Day
           ko: 3·1절
-      05-05:
+      #// 03-01 and if Saturday, Sunday, public holiday then next not holiday since 2022: #! Note that this doesn't work
+      #//   substitute: true
+      #//   name:
+      #//     en: The March 1st Independence Movement Day
+      #//     ko: 3·1절
+      #TODO: NO SUBSTITUTION, DELETE BELOW IF ISSUE IS RESOLVED
+      03-01 and if Saturday, Sunday then next Monday since 2022:
+        substitute: true
         name:
-          en: Children's Day
-          ko: 어린이날
-      korean 4-0-8:
+          en: The March 1st Independence Movement Day
+          ko: 3·1절
+      # Arbor Day
+      04-05 since 1949 and prior to 2006:
+        name:
+          en: Arbor Day
+          ko: 식목일
+        disable:
+          - '1959-04-05'
+      '1959-04-06':
+        substitute: true #* Notice how this does not work
+        name:
+          en: Arbor Day (Substitute Day)
+          ko: 식목일 (대체 휴일)
+      '1960-03-15':
+        name:
+          en: Landslide Prevention Day
+          ko: 사방의 날
+      # Buddha
+      korean 4-0-8 since 1975 and prior to 2018:
         name:
           en: Buddha's Birthday
           ko: 석가탄신일
-      06-06:
+      korean 4-0-8 since 2018:
+        name:
+          en: Buddha's Birthday
+          ko: 부처님오신날
+      # Labor Day (Note: not "일반 국가기념일" or public holiday)
+      03-10 since 1958 and prior to 1963:
+        _name: 05-01
+        name:
+          ko: 노동절
+        type: optional
+      03-30 since 1963 and prior to 1974:
+        _name: 05-01
+        type: optional
+      03-30 since 1974 and prior to 1994:
+        _name: 05-01
+        type: optional
+      05-01 since 1994:
+        _name: 05-01
+        type: optional # this might change again soon
+      # Children's Day
+      05-05 since 1922 and prior to 1975:
+        name:
+          en: Children's Day
+          ko: 어린이날
+        type: observance
+      05-05 since 1975 and prior to 2014:
+        name:
+          en: Children's Day
+          ko: 어린이날
+      #// 05-05 and if Saturday, Sunday, public holiday then next not holiday since 2014: #! Note that this doesn't work
+      #//   substitute: true
+      #//   name:
+      #//     en: Children's Day
+      #//     ko: 어린이날
+      #TODO: NO SUBSTITUTION, DELETE BELOW IF ISSUE IS RESOLVED
+      05-05 and if Saturday, Sunday then next Monday since 2014:
+        substitute: true
+        name:
+          en: Children's Day
+          ko: 어린이날
+      # 06-06
+      06-06 since 1956:
         name:
           en: Memorial Day
           ko: 현충일
-      07-17:
+      # Constitution
+      07-17 since 1949 and prior to 2008:
+        _name: Constitution Day
+      '1960-07-18':
+        substitute: true #* Notice how this does not work
+        name:
+          en: Constitution Day (Substitute Day)
+          ko: 제헌절 (대체 휴일)
+      07-17 since 2008:
         _name: Constitution Day
         type: observance
-      08-15:
+      # Liberation
+      08-15 since 1946 and prior to 2021:
+        _name: Liberation Day
+      #// 08-15 and if Saturday, Sunday, public holiday then next not holiday since 2021: #! Note that this doesn't work
+      #//   substitute: true
+      #//   _name: Liberation Day
+      #TODO: NO SUBSTITUTION, DELETE BELOW IF ISSUE IS RESOLVED
+      08-15 and if Saturday, Sunday then next Monday since 2021:
+        substitute: true
+        _name: Liberation Day
+      # Lunar 08-15
+      korean 8-0-15 since 1949 and prior to 1986:
         name:
-          en: Liberation Day
-          ko: 광복절
-      korean 8-0-15 P3D:
-        name:
-          en: Korean Thanksgiving
+          en: Chuseok
           ko: 추석
-      10-03:
+      korean 8-0-15 P2D since 1986 and prior to 1989:
         name:
-          en: National Foundation Day
+          en: Chuseok
+          ko: 추석
+      korean 8-0-14 P3D since 1989 and prior to 2014: #* Note that this does not "center" the holiday
+        name:
+          en: Chuseok
+          ko: 추석
+      #// korean 8-0-14 P3D and if Sunday, public holiday then next not holiday since 2014: #! Note that this doesn't work
+      #//   substitute: true
+      #//   name:
+      #//     en: Chuseok
+      #//     ko: 추석
+      #TODO: NO SUBSTITUTION, DELETE BELOW IF ISSUE IS RESOLVED
+      korean 8-0-14 P3D since 2014: #* Note that this does not "center" the holiday
+        name:
+          en: Chuseok
+          ko: 추석
+      substitutes korean 8-0-14 if Sunday then next Wednesday since 2014: 
+        substitute: true
+        name:
+          en: Chuseok
+          ko: 추석
+      substitutes korean 8-0-15 if Sunday then next Tuesday since 2014: 
+        substitute: true
+        name:
+          en: Chuseok
+          ko: 추석
+      substitutes korean 8-0-16 if Sunday then next Monday since 2014: 
+        substitute: true
+        name:
+          en: Chuseok
+          ko: 추석
+      # Army Day
+      10-01 since 1976 and prior to 1991:
+        name:
+          en: Armed Forces Day
+          ko: 국군의 날
+      '1989-10-02':
+        substitute: true #* Notice how this does not work
+        name:
+          en: Armed Forces Day (Substitute Day)
+          ko: 국군의 날 (대체 휴일)
+      # Foundation (although using "National Foundation Day" is inaccurate)
+      korean 10-0-03 since 1909 and prior to 1949:
+        name:
+          en: Gaecheonjeol
           ko: 개천절
-      10-09:
+      10-03 since 1949 and prior to 2021:
+        name:
+          en: Gaecheonjeol
+          ko: 개천절
+      #// 10-03 and if Saturday, Sunday, public holiday then next not holiday since 2021: #! Note that this doesn't work
+      #//   substitute: true
+      #//   name:
+      #//     en: Gaecheonjeol
+      #//     ko: 개천절
+      #TODO: NO SUBSTITUTION, DELETE BELOW IF ISSUE IS RESOLVED
+      10-03 and if Saturday, Sunday then next Monday since 2021:
+        substitute: true
+        name:
+          en: Gaecheonjeol
+          ko: 개천절
+      # Hangul
+      10-09 since 1949 and prior to 1991:
         name:
           en: Hangul Day
           ko: 한글날
-      12-25:
+      '1960-10-10':
+        substitute: true #* Notice how this does not work
+        name:
+          en: Hangul Day (Substitute Day)
+          ko: 한글날 (대체 휴일)
+      10-09 since 2005 and prior to 2013:
+        name:
+          en: Hangul Day
+          ko: 한글날
+        type: observance
+      10-09 since 2013 and prior to 2021:
+        name:
+          en: Hangul Day
+          ko: 한글날
+      #// 10-09 and if Saturday, Sunday, public holiday then next not holiday since 2021: #! Note that this doesn't work
+      #//   substitute: true
+      #//   name:
+      #//     en: Hangul Day
+      #//     ko: 한글날
+      #TODO: NO SUBSTITUTION, DELETE BELOW IF ISSUE IS RESOLVED
+      10-09 and if Saturday, Sunday then next Monday since 2021:
+        substitute: true
+        name:
+          en: Hangul Day
+          ko: 한글날
+      # UN Day
+      10-24 since 1950 and prior to 1976:
+        name:
+          en: United Nations Day
+          ko: 국제연합일
+      # Christmas
+      12-25 since 1885 and prior to 1949:
         _name: 12-25
-    # states:
-    #   11:
-    #     name: Seoul
-    #   26:
-    #     name: Busan
-    #   27:
-    #     name: Daegu
-    #   28:
-    #     name: Incheon
-    #   29:
-    #     name: Gwangju City
-    #   30:
-    #     name: Daejeon
-    #   31:
-    #     name: Ulsan
-    #   41:
-    #     name: Gyeonggi
-    #   42:
-    #     name: Gangwon
-    #   43:
-    #     name: North Chungcheong
-    #   44:
-    #     name: South Chungcheong
-    #   45:
-    #     name: North Jeolla
-    #   46:
-    #     name: South Jeolla
-    #   47:
-    #     name: North Gyeongsang
-    #   48:
-    #     name: South Gyeongsang
-    #   49:
-    #     name: Jeju
-    #   50:
-    #     name: Sejong
+        name:
+          ko: 기독탄신일
+        type: optional
+      12-25 since 1949 and prior to 1974:
+        _name: 12-25
+        name:
+          ko: 기독탄신일
+      '1960-12-26':
+        substitute: true #* Notice how this does not work
+        name:
+          en: Christmas Day (Substitute Day)
+          ko: 기독탄신일 (대체 휴일)
+      12-25 since 1974:
+        _name: 12-25
+      # Vote Days
+      '2012-12-19':
+        name:
+          en: Presidental Election Day
+          ko: 대통령 선거일
+      '2017-05-09':
+        name:
+          en: Presidental Election Day
+          ko: 대통령 선거일
+      Wednesday after 03-03 every 5 years since 2022:
+        name:
+          en: Presidental Election Day
+          ko: 대통령 선거일
+      Wednesday after 04-09 every 4 years since 2012:
+        name:
+          en: Parliamentary Election Day
+          ko: 국회의원 선거일
+      05-31 on Wednesday every 4 years since 2010:
+        name:
+          en: National Simultaneous Local Election Day
+          ko: 전국동시지방선거일
+      06-01 on Wednesday every 4 years since 2010:
+        name:
+          en: National Simultaneous Local Election Day
+          ko: 전국동시지방선거일
+      06-02 on Wednesday every 4 years since 2010:
+        name:
+          en: National Simultaneous Local Election Day
+          ko: 전국동시지방선거일
+      06-03 on Wednesday every 4 years since 2010:
+        name:
+          en: National Simultaneous Local Election Day
+          ko: 전국동시지방선거일
+      06-04 on Wednesday every 4 years since 2010:
+        name:
+          en: National Simultaneous Local Election Day
+          ko: 전국동시지방선거일
+      06-05 on Wednesday every 4 years since 2010:
+        name:
+          en: National Simultaneous Local Election Day
+          ko: 전국동시지방선거일
+      06-13 on Wednesday every 4 years since 2010: # reason why there's 7 of this
+        name:
+          en: National Simultaneous Local Election Day
+          ko: 전국동시지방선거일
+      # Temporary Holidays
+      '1948-12-15':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1949-05-10':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1949-07-05':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1950-06-21':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1957-03-26':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1958-03-26':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1959-03-26':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1960-03-26':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1960-10-01':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1961-04-19':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1962-04-19':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1962-05-16':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1962-12-17':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1963-04-19':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1963-05-16':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1963-12-17':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1966-10-01':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1967-01-04':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1967-07-01':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1969-07-21':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1969-10-17':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1971-07-01':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1972-11-21':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1972-12-15':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1972-12-27':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1974-08-19':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1975-02-12':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1978-05-18':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1978-12-27':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1979-11-03':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1979-12-21':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1980-09-01':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1980-10-22':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1981-02-11':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1981-03-03':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1982-10-02':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1987-10-27':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1988-02-25':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '1988-09-17':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '2002-07-01':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '2015-08-14':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '2016-05-06':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '2017-10-02':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      '2020-08-17':
+        name:
+          en: Temporary Holiday
+          ko: 임시공휴일
+      # state-specific holidays (should display as observance to other states)
+      04-03 since 2022:
+        name:
+          en: 4.3 Victims Memorial Day
+          ko: 4.3희생자 추념일
+        type: observance
+      05-18 since 1997:
+        name:
+          en: 5.18 Gwangju Democratization Movement Day
+          ko: 5.18 광주민주화운동 기념일
+        type: observance
+    states:
+      # 11:
+      #   name: 서울특별시
+      26:
+        name: 부산광역시
+        days:
+          '1967-03-04':
+            name:
+              en: Temporary Holiday
+              ko: 임시공휴일
+          '2005-11-18':
+            name:
+              en: Temporary Holiday
+              ko: 임시공휴일
+      # 27:
+      #   name: 대구광역시
+      # 28:
+      #   name: 인천광역시
+      29:
+        name: 광주광역시
+        days:
+          05-18 since 2020:
+            name:
+              en: 5.18 Gwangju Democratization Movement Day
+              ko: 5.18 광주민주화운동 기념일
+            type: optional
+      # 30:
+      #   name: 대전광역시
+      # 31:
+      #   name: 울산광역시
+      # 41:
+      #   name: 경기도
+      # 42:
+      #   name: 강원도
+      # 43:
+      #   name: 충청북도
+      # 44:
+      #   name: 충청남도
+      45:
+        name: 전라북도
+        regions:
+          gs:
+            name: 군산시
+            days:
+              '2005-11-02':
+                name:
+                  en: Temporary Holiday
+                  ko: 임시공휴일
+      # 46:
+      #   name: 전라남도
+      47:
+        name: 경상북도
+        regions:
+          ph:
+            name: 포항시
+            days:
+              '2005-11-02':
+                name:
+                  en: Temporary Holiday
+                  ko: 임시공휴일
+          yd:
+            name: 영덕군
+            days:
+              '2005-11-02':
+                name:
+                  en: Temporary Holiday
+                  ko: 임시공휴일
+          gj:
+            name: 경주시
+            days:
+              '2005-11-02':
+                name:
+                  en: Temporary Holiday
+                  ko: 임시공휴일
+      # 48:
+      #   name: 경상남도
+      49:
+        name: 제주특별자치도
+        days:
+          04-03 since 2018:
+            name:
+              en: 4.3 Victims Memorial Day
+              ko: 4.3희생자 추념일
+            type: optional
+          '2005-07-27':
+            name:
+              en: Temporary Holiday
+              ko: 임시공휴일
+      # 50:
+      #   name: 세종특별자치시

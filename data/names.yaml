@@ -101,6 +101,7 @@ names:
       de: Valentinstag
       fr: Saint-Valentin
       hu: Valentin nap
+      # ko: 밸런타인 데이
       nl: Valentijnsdag
       vi: Lễ tình nhân
   03-08:
@@ -114,6 +115,7 @@ names:
       ge: ქალთა საერთაშორისო დღე
       hu: Nemzetközi nőnap
       hy: Կանանց տոն
+      # ko: 여성의 날
       nl: Internationale Vrouwendag
       pt: Dia Internacional da Mulher
       ro: Ziua Internationala a Femeii
@@ -137,6 +139,7 @@ names:
     name:
       en: April Fools' Day
       hu: Bolondok napja
+      # ko: 만우절
       nl: 1 April
       sq: Dita e Gënjeshtrave
       vi: Cá tháng tư
@@ -163,6 +166,7 @@ names:
       id: Hari Buruh Internasional
       it: Festa del Lavoro
       is: Hátíðisdagur Verkamanna
+      ko: 근로자의 날
       lt: Tarptautinė darbo diena
       lv: Darba svētki
       nl: Dag van de Arbeid
@@ -324,6 +328,7 @@ names:
       hu: Szenteste
       is: Aðfangadagur
       kl: juulliaraq
+      # ko: 크리스마스 이브
       lt: Šv. Kūčios
       lv: Ziemassvētku vakars
       ms: Hari Sebelum Krismas
@@ -364,7 +369,7 @@ names:
       is: Jóladagur
       jp: ノエル
       kl: juullerujussuaq
-      ko: 기독탄신일
+      ko: 성탄절
       lt: Šv. Kalėdos
       lv: Ziemassvētki
       mg: Krismasy
@@ -580,6 +585,7 @@ names:
       it: Domenica di Pasqua
       is: Páskadagur
       kl: poorskip-ullua
+      # ko: 부활절
       lt: Velykos
       lv: Lieldienas
       nl: Pasen
@@ -994,6 +1000,7 @@ names:
     name:
       en: Liberation Day
       ar: يوم التحرير
+      ko: 광복절
       nl: Bevrijdingsdag
       no: Frigjøringsdagen
       sq: Dita e Çlirimit
@@ -1031,6 +1038,7 @@ names:
       es: Fiesta Nacional
       fr: Fête nationale
       hu: Nemzeti ünnep
+      ko: 국경일
       el: εθνική επέτειος
       nl: Nationale feestdag
       vi: Quốc Lễ
@@ -1038,6 +1046,7 @@ names:
     name:
       en: Public Holiday
       fr: Jour férié légaux
+      ko: 국가기념일
       nl: Wettelijke feestdag
       pt: Feriado Obrigatório
       vi: Nghỉ lễ Toàn Quốc
@@ -1068,6 +1077,7 @@ names:
       fr: jour substitut
       hr: zamjena dan
       jp: 振替休日
+      ko: 대체 휴일
       lv: aizstājējs diena
       mk: заменет ден
       nl: substituut

@@ -96,8 +96,8 @@
     "start": "2024-05-17T15:00:00.000Z",
     "end": "2024-05-18T15:00:00.000Z",
     "name": "5.18 광주민주화운동 기념일",
-    "type": "observance",
-    "rule": "05-18 since 1997",
+    "type": "optional",
+    "rule": "05-18 since 2020",
     "_weekday": "Sat"
   },
   {
