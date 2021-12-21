@@ -22,10 +22,18 @@ holidays:
       01-01 since 1998:
         _name: 01-01
       # Lunar New Year
-      1 days before korean 01-0-01 P3D prior to 1896: #* Note that this does not "center" the holiday
+      1 days before korean 01-0-01 prior to 1896:
+        name:
+          en: Korean New Year
+          ko: 설 연휴
+      korean 01-0-01 prior to 1896:
         name:
           en: Korean New Year
           ko: 설날
+      korean 01-0-02 prior to 1896:
+        name:
+          en: Korean New Year
+          ko: 설 연휴
       korean 01-0-01 since 1896 and prior to 1985:
         name:
           en: Korean New Year
@@ -35,35 +43,49 @@ holidays:
         name:
           en: Folk Day
           ko: 민속의 날
-      1 days before korean 01-0-01 P3D since 1999 and prior to 2014: #* Note that this does not "center" the holiday
+      1 days before korean 01-0-01 since 1999 and prior to 2014:
+        name:
+          en: Korean New Year
+          ko: 설 연휴
+      korean 01-0-01 since 1999 and prior to 2014:
         name:
           en: Korean New Year
           ko: 설날
-      #// 1 days before korean 01-0-01 P3D and if Sunday, public holiday then next not holiday since 2014: #! Note that this doesn't work
+      korean 01-0-02 since 1999 and prior to 2014:
+        name:
+          en: Korean New Year
+          ko: 설 연휴
+      #// 1 days before korean 01-0-01 and if Sunday, public holiday then next workday since 2014: #! Note that this doesn't work
+      #//   substitute: true
+      #//   name:
+      #//     en: Korean New Year
+      #//     ko: 설 연휴
+      #// korean 01-0-01 and if Sunday, public holiday then next workday since 2014: #! Note that this doesn't work
       #//   substitute: true
       #//   name:
       #//     en: Korean New Year
       #//     ko: 설날
+      #// korean 01-0-02 and if Sunday, public holiday then next workday since 2014: #! Note that this doesn't work
+      #//   substitute: true
+      #//   name:
+      #//     en: Korean New Year
+      #//     ko: 설 연휴
       #TODO: NO SUBSTITUTION, DELETE BELOW IF ISSUE IS RESOLVED
-      1 days before korean 01-0-01 P3D since 2014: #* Note that this does not "center" the holiday
+      1 days before korean 01-0-01 and if Sunday then next Wednesday since 2014: 
+        substitute: true
         name:
           en: Korean New Year
-          ko: 설날
-      substitutes 1 days before korean 01-0-01 if Sunday then next Wednesday since 2014: 
+          ko: 설 연휴
+      korean 01-0-01 and if Sunday then next Tuesday since 2014: 
         substitute: true
         name:
           en: Korean New Year
           ko: 설날
-      substitutes korean 01-0-01 if Sunday then next Tuesday since 2014: 
+      korean 01-0-02 and if Sunday then next Monday since 2014: 
         substitute: true
         name:
           en: Korean New Year
-          ko: 설날
-      substitutes korean 01-0-02 if Sunday then next Monday since 2014: 
-        substitute: true
-        name:
-          en: Korean New Year
-          ko: 설날
+          ko: 설 연휴
       # 03-01
       03-01 since 1920 and prior to 1949:
         name:
@@ -73,7 +95,7 @@ holidays:
         name:
           en: The March 1st Independence Movement Day
           ko: 3·1절
-      #// 03-01 and if Saturday, Sunday, public holiday then next not holiday since 2022: #! Note that this doesn't work
+      #// 03-01 and if Saturday, Sunday, public holiday then next workday since 2022: #! Note that this doesn't work
       #//   substitute: true
       #//   name:
       #//     en: The March 1st Independence Movement Day
@@ -134,7 +156,7 @@ holidays:
         name:
           en: Children's Day
           ko: 어린이날
-      #// 05-05 and if Saturday, Sunday, public holiday then next not holiday since 2014: #! Note that this doesn't work
+      #// 05-05 and if Saturday, Sunday, public holiday then next workday since 2014: #! Note that this doesn't work
       #//   substitute: true
       #//   name:
       #//     en: Children's Day
@@ -164,7 +186,7 @@ holidays:
       # Liberation
       08-15 since 1946 and prior to 2021:
         _name: Liberation Day
-      #// 08-15 and if Saturday, Sunday, public holiday then next not holiday since 2021: #! Note that this doesn't work
+      #// 08-15 and if Saturday, Sunday, public holiday then next workday since 2021: #! Note that this doesn't work
       #//   substitute: true
       #//   _name: Liberation Day
       #TODO: NO SUBSTITUTION, DELETE BELOW IF ISSUE IS RESOLVED
@@ -180,31 +202,45 @@ holidays:
         name:
           en: Chuseok
           ko: 추석
-      korean 8-0-14 P3D since 1989 and prior to 2014: #* Note that this does not "center" the holiday
+      korean 8-0-14 since 1989 and prior to 2014:
+        name:
+          en: Chuseok
+          ko: 추석 연휴
+      korean 8-0-15 since 1989 and prior to 2014:
         name:
           en: Chuseok
           ko: 추석
-      #// korean 8-0-14 P3D and if Sunday, public holiday then next not holiday since 2014: #! Note that this doesn't work
+      korean 8-0-16 since 1989 and prior to 2014:
+        name:
+          en: Chuseok
+          ko: 추석 연휴
+      #// korean 8-0-14 and if Sunday, public holiday then next workday since 2014: #! Note that this doesn't work
+      #//   substitute: true
+      #//   name:
+      #//     en: Chuseok
+      #//     ko: 추석
+      #// korean 8-0-15 and if Sunday, public holiday then next workday since 2014: #! Note that this doesn't work
+      #//   substitute: true
+      #//   name:
+      #//     en: Chuseok
+      #//     ko: 추석
+      #// korean 8-0-16 and if Sunday, public holiday then next workday since 2014: #! Note that this doesn't work
       #//   substitute: true
       #//   name:
       #//     en: Chuseok
       #//     ko: 추석
       #TODO: NO SUBSTITUTION, DELETE BELOW IF ISSUE IS RESOLVED
-      korean 8-0-14 P3D since 2014: #* Note that this does not "center" the holiday
-        name:
-          en: Chuseok
-          ko: 추석
-      substitutes korean 8-0-14 if Sunday then next Wednesday since 2014: 
+      korean 8-0-14 and if Sunday then next Wednesday since 2014: 
         substitute: true
         name:
           en: Chuseok
           ko: 추석
-      substitutes korean 8-0-15 if Sunday then next Tuesday since 2014: 
+      korean 8-0-15 and if Sunday then next Tuesday since 2014: 
         substitute: true
         name:
           en: Chuseok
           ko: 추석
-      substitutes korean 8-0-16 if Sunday then next Monday since 2014: 
+      korean 8-0-16 and if Sunday then next Monday since 2014: 
         substitute: true
         name:
           en: Chuseok
@@ -228,7 +264,7 @@ holidays:
         name:
           en: Gaecheonjeol
           ko: 개천절
-      #// 10-03 and if Saturday, Sunday, public holiday then next not holiday since 2021: #! Note that this doesn't work
+      #// 10-03 and if Saturday, Sunday, public holiday then next workday since 2021: #! Note that this doesn't work
       #//   substitute: true
       #//   name:
       #//     en: Gaecheonjeol
@@ -258,7 +294,7 @@ holidays:
         name:
           en: Hangul Day
           ko: 한글날
-      #// 10-09 and if Saturday, Sunday, public holiday then next not holiday since 2021: #! Note that this doesn't work
+      #// 10-09 and if Saturday, Sunday, public holiday then next workday since 2021: #! Note that this doesn't work
       #//   substitute: true
       #//   name:
       #//     en: Hangul Day
